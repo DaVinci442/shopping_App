@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 export default function App() {
   return (
     <View style={styles.body}>
-      <Text style = {styles.text}> Davinci is the greatest of all time</Text>
+      <Text style = {styles.text}> The Mordern Shopping App</Text>
       <Button style = {styles.button} title = 'Davinci Code'></Button>
       <StatusBar style="auto" />
     </View>            
