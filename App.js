@@ -1,47 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, Button, Linking, Image, } from 'react-native';
+import SignInScreen from './app/src/views/screens/SignInScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import SignUpScreen from './app/src/views/screens/SignUpScreen';
+
+// const Stack = createStackNavigator();
 
 export default function App() {
-  const presser = () => console.log(" The Mordern Shopping App 😇 fthrsrstrstrsrtsrsrsreearearar ")
   return (
-    <SafeAreaView style={styles.body}>
-      <Text style = {styles.text} onPress = {(presser)} numberOfLines = {1}> The Mordern Shopping App 😇 fthrsrstrstrsrtsrsrsreearearar </Text>
-      <Button title = 'Dcit208-IA'  onPress={()=>{Linking.openURL('https://yout.ube/WBneezfRN4E')}} ></Button>
-      <Image source = {require("C:\Users\Davinci\AwesomeProject\assets\icon.png")}/>
-      
-      <Text style = {styles.text}>Contact Me</Text>
-   <StatusBar style="auto" />
-    </SafeAreaView>    
-              
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{header: () => null}}>
+        <Stack.Screen name="SignIn" component={SignInScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create( { 
-  container: {
-    flex: 1,
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  body: {
-    flex: 1,
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: { 
-    color: 'black',
-    fontSize: 20,
-    margin: 10,
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    color : 'red',
-  },
-});
 
 
 
